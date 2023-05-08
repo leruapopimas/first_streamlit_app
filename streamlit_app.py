@@ -49,8 +49,6 @@ try:
 except URLErrors as e: 
       streamlit.error()
 
-#don't run anything past here 
-#streamlit.stop()
 
 
 streamlit.header("The fruit list contains: ")
@@ -67,6 +65,8 @@ if streamlit.button('Get Fruit Load List'):
    streamlit.dataframe(my_data_rows)
 
 #####end
+#don't run anything past here 
+streamlit.stop()
 
 
 my_cur.execute ("insert into fruit_load_list values('from streamlit')")
